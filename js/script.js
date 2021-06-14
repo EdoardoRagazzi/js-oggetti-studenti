@@ -9,6 +9,7 @@ var nomeStudente = prompt('Inserisci nome tudente:');
 var cognomeStudente = prompt('Inserisci cognome studente:');
 var etaStudente = parseInt(prompt('Inserisci eta:'));
 
+// Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 var studente = {
     nome: nomeStudente,
     cognome: cognomeStudente,
@@ -20,4 +21,19 @@ console.log(studente);
 // Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 for (var x in studente) {
     console.log(studente[x]);
-}
+};
+
+// Creare un array di oggetti di studenti.
+var studenti = [
+    {
+        nome: 'Teodoro',
+        cognome: 'Rinco',
+        eta: 28,
+    },
+    {
+        nome: 'Ulisse',
+        cognome: 'Rosso',
+        eta: 23,
+    }
+];
+
