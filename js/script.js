@@ -9,7 +9,7 @@ var nomeStudente = prompt('Inserisci nome tudente:');
 var cognomeStudente = prompt('Inserisci cognome studente:');
 var etaStudente = parseInt(prompt('Inserisci eta:'));
 
-// Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
+// // Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 var studente = {
     nome: nomeStudente,
     cognome: cognomeStudente,
@@ -26,14 +26,38 @@ for (var x in studente) {
 // Creare un array di oggetti di studenti.
 var studenti = [
     {
-        nome: 'Teodoro',
-        cognome: 'Rinco',
-        eta: 28,
+        firstName: 'Teodoro',
+        surName: 'Rinco',
+        age: 28,
     },
     {
-        nome: 'Ulisse',
-        cognome: 'Rosso',
-        eta: 23,
+        firstname: 'Ulisse',
+        surname: 'Rosso',
+        age: 23,
     }
 ];
 
+console.log(studenti);
+
+for (var i = 0; i < studenti.length; i++) {
+    console.log(studenti[i].firstName);
+    console.log(studenti[i].surName);
+    document.getElementById('studente').innerHTML += studenti[i].firstName + ' ' + studenti[i].surName + ' ';
+
+};
+
+// Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, 
+
+var nomeNewStudente = prompt('Inserisci nome tudente:');
+var cognomeNewStudente = prompt('Inserisci cognome studente:');
+var etaNewStudente = parseInt(prompt('Inserisci eta:'));
+
+var newStudente = {
+    nome: nomeNewStudente,
+    cognome: cognomeNewStudente,
+    eta: etaNewStudente
+};
+
+studenti.push(newStudente);
+
+console.log(studenti);
